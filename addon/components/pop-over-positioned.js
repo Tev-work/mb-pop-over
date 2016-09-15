@@ -21,6 +21,7 @@ export default TetheredComponent.extend({
   targetAttachment: Ember.computed.reads("popOver.anchor-attachment"),
   attachment:       Ember.computed.reads("popOver.body-attachment"),
   constraints:      Ember.computed.reads("popOver.body-constraints"),
+  offset:           Ember.computed.reads("popOver.offset"),
 
   showingChanged: Ember.on("didInsertElement", Ember.observer("isOpen", function() {
     if (this.get("isOpen")) {
