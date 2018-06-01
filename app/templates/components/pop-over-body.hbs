@@ -1,5 +1,8 @@
 {{#if isOpen}}
-  {{#pop-over-positioned}}
-    {{yield}}
-  {{/pop-over-positioned}}
+  {{! https://github.com/yapplabs/ember-tether/issues/35 }}
+  <div>
+    {{#pop-over-positioned}}
+      {{yield}}
+    {{/pop-over-positioned}}
+  </div>
 {{/if}}
